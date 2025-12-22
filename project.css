@@ -1,0 +1,1273 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.website_container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+}
+
+/* Header Section */
+.header_container {
+    display: flex;
+    /*margin-bottom: 1px;*/
+    /*border-bottom: 1px solid #3d0505;*/
+}
+
+.header {
+    padding-left: 70px;
+    padding-right: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    height: 140px;
+    width: 170px;
+}
+
+.ContactUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 220px;
+    font-size: 18px;
+    font-family: Rubik, sans-serif;
+    color: rgb(7, 7, 69);
+    background-color: rgb(251, 203, 72);
+    border-radius: 8px;
+}
+
+.ContactUs:hover {
+    background-color: rgb(7, 7, 69);
+    color: white;
+}
+
+
+.main_container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* hide overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:100px;
+}
+
+/* Base layer (image 1) */
+.main_container::before,
+.main_container::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center; /* isse image full ayegi*/
+  background-repeat: no-repeat;
+  transition: opacity 3s ease-in-out;
+
+  z-index: -1;  /* behind the content */
+}
+
+/* First image 
+.main_container::before {
+  background-image: url('ukUNIVERSITY.avif');
+  animation: fadeSlide 8s infinite;
+  
+}*/
+.main_container::before {
+  /*background-image: url('queenUniversity.jpg');*/
+  background-image: url('cambridgeuni.jpg');
+  background-size: cover;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Second image */
+.main_container::after {
+  background-image: url('mainimg2.jpg');
+  animation: fadeSlide2 8s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+  
+
+
+/* keyframes for both images */
+@keyframes fadeSlide {
+  0%, 50% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+
+@keyframes fadeSlide2 {
+  0%, 50% { opacity: 0; }
+  55%, 100% { opacity: 1; }
+}
+
+
+/* Start Journey */
+/*         main_container         */
+
+
+.main-box{
+  display: flex;
+  flex-direction: column;
+
+}
+.headingS{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap:5px;
+  margin-top: 120px;
+
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+   color:#fbfdff;
+}
+
+.lowheading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color:#f6f9fc;
+}
+.aboutus_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  opacity:0.7;
+  
+}
+.about_us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: #022339;
+  color: white;
+  padding:20px;
+  border-radius: 10px;
+  
+}
+.buttoncontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start{
+  display: flex;
+    justify-content:left;
+    align-items:center;
+    padding: 12px 25px;
+    font-size: 22px;
+    border-radius: 8px;
+    background-color: #0a9af3;
+    color: rgb(248, 248, 248);
+    margin-top: 32px;  /* spacing from heading */
+}
+.start:hover{
+  background-color: #070131;
+}
+
+
+           /* FORM */
+        
+  form {
+    max-width: 450px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+    font-family: "Poppins", sans-serif;
+  }
+  form label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"],
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+  }
+  form input:focus,
+  form textarea:focus {
+    border-color: #69b5f2;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+  }
+  form button {
+    width: 100%;
+    padding: 12px;
+    background: #2b92e7;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  form button:hover {
+    background: #070131;
+  }
+
+
+
+/* --- POPUP FORM STYLING --- */
+.form_popup {
+  display: none; /*default hidden*/
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.form_content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close_btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close_btn:hover {
+  color: red;
+}
+
+          
+
+
+/* --- Destinations Section --- */
+.destinations_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#f8fbff;
+    padding: 60px 20px;
+}
+
+.destinations_heading {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+.destinations_heading h2 {
+  font-size: 27px;
+}
+.destinations_heading p {
+  font-size: 21px;
+}
+
+.countries_grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.country_box {
+    background-color: /*#e3edf9;*/#bfdafd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.country_image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+.country_box h3{
+  font-size: 20px;
+}
+.country_box p{
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+        /* PAGE 3*/
+
+.page_3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /*min-height: 100vh;*/
+  padding: 40px;
+  flex-direction: column;
+  gap:25px;
+  background-color:/* #e3edf9;*/#bfdafd;;
+  
+}
+.page3_heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.difference_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  max-width: 1200px;
+  
+}
+
+.point_box {
+  background: white;
+  width: 270px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.point_box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.box_heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  color: #0d47a1;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.box_h {
+  font-size: 21px;
+  color:#0d47a1;
+}
+
+.box_p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
+
+      /*  OUR METHOD */
+
+
+.hero_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px 0;
+  gap: 25px;
+}
+
+.method_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #09387f;
+}
+
+.our_method {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* ✅ makes all boxes equal height */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ evenly distribute content */
+  align-items: center;
+  padding: 25px;
+  width: 280px;
+  min-height: 420px; /* ✅ consistent height */
+  border-radius: 8px;
+  gap: 20px;
+  background-color:#bfdafd;/* #129aef;*/
+  line-height: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  color:rgb(11, 11, 11);
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(13, 71, 161, 0.3);
+}
+
+/* ✅ Reserve consistent space for headings */
+.boxheading {
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  min-height: 60px; /* ensures all headings take equal vertical space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Keep all images same size */
+.pic {
+  height: 150px;
+  width: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover .pic {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* ✅ Make paragraph flexible and balanced */
+.boxpara {
+  font-size: 17px;
+  line-height: 1.4;
+  flex-grow: 1; /* fills remaining space for equal height look */
+  display: flex;
+  align-items: flex-start; /* keep text at top of its section */
+  justify-content: center;
+  margin-top:10px;
+}
+
+
+        /*  FAQs Secrion   */
+
+       
+.faq_section {
+  width: 100%;
+  background: #bfdafd;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq_container {
+  width: 100%;
+  max-width: 800px;   /* Keeps FAQ centered */
+  background: white;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.faq_title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d47a1;
+}
+
+.faq_item {
+  border-bottom: 1px solid #ddd;
+  padding: 18px 0;
+}
+
+.faq_question {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  color: #0d47a1;
+  font-weight: 600;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq_question:hover {
+  color: #1565c0;
+}
+
+.faq_answer {
+  display: none;
+  margin-top: 12px;
+  line-height: 21px;
+  font-size: 18px;
+  color: #444;
+}
+
+.faq_item.active .faq_answer {
+  display: block;
+}
+
+.faq_item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+
+          /* FOOTER SECTION*/
+
+.footer_container {
+    background-color: #021b37;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 10px;
+    font-family: Rubik, sans-serif;
+    width:100%;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.footer_brand {
+    text-align: left;
+    max-width: 500px;
+}
+.footer_brand h2 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.footer_brand h4{
+  color: rgb(253, 252, 252);
+  margin-bottom: 8px;
+}
+.footer_brand p {
+    color: #d0d7e1;
+    font-size: 16px;
+    margin: 0;
+}
+.footer_socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap:15px;
+}
+.logopic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+}
+.whatsapp{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #bfdafd;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whtsplogo{
+   width: 32px;
+  height: 32px;
+}
+.whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   MOBILE FULL-WIDTH FIX
+   =============================== */
+@media (max-width: 600px) {
+
+  body,
+  .main,
+  .container,
+  .wrapper,
+  .hero,
+  .header {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+}
+
+
+/* MOBILE HEADER FIX */
+@media (max-width: 600px) {
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .ContactUs {
+    font-size: 13px;
+    padding: 8px 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .lowheading {
+    font-size: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about_us {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* countries section */
+  .countries_grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .country_box {
+    width: 100%;
+  }
+  /* how are we different*/
+  .page3_heading{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /**/
+  .method_container{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /**/
+  .testimonials h2{
+    font-size: 15px;
+  }
+
+  /* page 3 */
+  .point_box {
+    width: 100%;
+  }
+
+  /* our method */
+  .box {
+    width: 100%;
+  }
+
+  .footer_socials{
+    margin:20px;
+    
+  }
+   .whatsapp {
+    bottom: 18px;
+    right: 18px;
+    width: 55px;
+    height: 55px;
+  }
+
+}
+/* ===============================
+   MOBILE TESTIMONIAL FIX
+================================ */
+@media (max-width: 768px) {
+
+  .testimonials {
+    padding: 40px 15px;
+  }
+
+  .testimonial-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    min-width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Image + name center */
+  .testimonial-card img {
+    display: block;
+    margin: 0 auto 8px;
+  }
+
+  .testimonial-card h3,
+  .student_about {
+    text-align: center;
+  }
+
+  .testimonial-card p {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  /* Arrows position */
+  .testimonial-arrow {
+    top: auto;
+    bottom: -15px;
+    transform: none;
+  }
+
+  .testimonial-arrow.left {
+    left: 35%;
+  }
+
+  .testimonial-arrow.right {
+    right: 35%;
+  }
+}
+/* =================================
+   MOBILE TESTIMONIAL SCROLL FIX
+================================= */
+@media (max-width: 768px) {
+
+  .testimonial-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonial-track {
+    justify-content: flex-start;   /* VERY IMPORTANT */
+    overflow: visible;             /* allow full scroll */
+  }
+
+  .testimonial-card {
+    min-width: 85%;
+    max-width: 85%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Center image + heading */
+  .testimonial-card img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .testimonial-card h3,
+  .student_about {
+    text-align: center;
+  }
+  .testimonial-wrapper {
+    padding: 16px 16px;   /* left & right space */
+  }
+}
+/* MOBILE SPACING FIX FOR TESTIMONIALS */
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    padding: 16px 16px;   /* left & right space */
+  }
+}
+
+
+/* ===============================
+   MOBILE HEADER FIX (IMPORTANT)
+   =============================== */
+@media (max-width: 600px) {
+
+  .header {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .logo {
+    width: 90px;
+    height: auto;
+  }
+
+  .ContactUs {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 12px;
+    height: auto;
+    border-radius: 6px;
+  }
+
+}
+
+
+
+
+/* DUBAI PAGE CSS *-*-*-*-*-*- DUBAI PAGE CSS */
+/* HERO SECTION */
+.hero_dubai {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(
+      rgba(2, 27, 55, 0.75),
+      rgba(2, 27, 55, 0.75)
+    ),
+    url("dubai.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hero_dubai h1 {
+  font-size: 42px;
+  max-width: 900px;
+  margin-bottom: 15px;
+}
+
+.hero_dubai p {
+  font-size: 23px;
+  max-width: 750px;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+/* CTA BUTTONS */
+/* CTA BUTTONS */
+.cta_buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cta_buttons button,
+.cta_buttons .cta_btn {
+  padding: 12px 26px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #0a9af3;
+  color: white;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.cta_buttons button:hover,
+.cta_buttons .cta_btn:hover {
+  background-color: #070131;
+  transform: translateY(-2px);
+}
+
+
+/* WHY STUDY IN DUBAI */
+
+.why_dubai {
+  background-color: #f8fbff;
+  padding: 70px 20px;
+}
+
+.why_dubai h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #0d47a1;
+  margin-bottom: 45px;
+}
+
+/* Grid */
+.why_dubai_grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Individual item */
+.why_item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgb(23, 45, 106);
+  padding: 22px 25px;
+  border-radius: 12px;
+  color:white;
+  font-size: 20px;
+  box-shadow: 0 6px 18px rgba(4, 18, 67, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect (subtle & professional) */
+.why_item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(164, 195, 241, 0.18);
+}
+
+/* Text */
+.why_item p{
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .why_dubai_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COURSES SECTION */
+/* COURSES IN DUBAI – PROFESSIONAL STYLE */
+
+.courses_dubai {
+  background-color: #bfdafd;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.courses_dubai h2 {
+  font-size: 32px;
+  margin-bottom: 45px;
+  color: #0d47a1;
+}
+
+/* Grid */
+.courses_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 28px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+.course_card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+.course_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(13, 71, 161, 0.22);
+}
+
+/* Icon */
+.course_icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.course_card p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .courses_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* UNIVERSITIES TABLE */
+.dubai_universities {
+  padding: 70px 20px;
+  background: #f8fbff;
+}
+
+.dubai_universities h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #0d47a1;
+}
+
+.dubai_universities table {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.dubai_universities th,
+.dubai_universities td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.dubai_universities th {
+  background-color: #09387f;
+  color: white;
+  font-weight: 600;
+}
+
+.dubai_universities tr:nth-child(even) {
+  background-color: #f1f6ff;
+}
+
+.dubai_universities tr:hover {
+  background-color: #e3efff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero_dubai h1 {
+    font-size: 30px;
+  }
+
+  .hero_dubai p {
+    font-size: 16px;
+  }
+
+  .cta_buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cta_buttons button {
+    width: 100%;
+  }
+
+  .dubai_universities table {
+    font-size: 14px;
+  }
+}
+
+
+
+                /* Student Reviews */
+/* TESTIMONIAL SECTION */
+.testimonials {
+  background: #f8f9fc;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #1e2a5a;
+}
+
+/* Wrapper */
+.testimonial-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;   /* arrows stay fixed */
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;   /* THIS is what scrolls */
+  scroll-behavior: smooth;
+}
+
+
+/* Card */
+.testimonial-card {
+  min-width: 320px;
+  max-width: 320px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+/* Image */
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.testimonial-card h3 {
+  margin: 5px 0;
+  color: #1e2a5a;
+}
+
+.student_about {
+  font-size:18px;
+  color: #0f0e0e;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.testimonial-card p {
+  font-size: 17px;
+  color: #120101;
+  line-height: 1.6;
+}
+
+/* Arrows */
+.testimonial-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #1e2a5a;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.testimonial-arrow.left {
+  left: 0;
+}
+
+.testimonial-arrow.right {
+  right: 0;
+}
+
+.testimonial-arrow:hover {
+  background: #ffb703;
+}
+
+
+

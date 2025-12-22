@@ -1,0 +1,543 @@
+/* =========================
+   UK PAGE CSS
+========================= */
+
+/* HERO SECTION */
+.hero_country {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(
+      rgba(2, 27, 55, 0.75),
+      rgba(2, 27, 55, 0.75)
+    ),
+    url("uk.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 120px 20px 80px;
+}
+
+.hero_country h1 {
+  font-size: 42px;
+  max-width: 900px;
+  margin-bottom: 15px;
+}
+
+.hero_country p {
+  font-size: 18px;
+  max-width: 750px;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+.hero_content p{
+  font-size: 25px;
+}
+
+/* =========================
+   CTA BUTTONS 
+========================= */
+.cta_buttons {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.cta_btn{
+padding: 12px 26px;
+  font-size: 19px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0a9af3;
+  color: white;
+  border: none;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta_buttons :hover {
+  background-color: #070131;
+  transform: translateY(-2px);
+}
+
+ 
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+@media (max-width: 768px) {
+  .hero_country h1 {
+    font-size: 30px;
+  }
+
+  .hero_country p {
+    font-size: 16px;
+  }
+
+  .cta_buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cta_buttons button {
+    width: 100%;
+  }
+}
+
+
+           /* FORM */
+        
+  form {
+    max-width: 450px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+    font-family: "Poppins", sans-serif;
+  }
+  form label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"],
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+  }
+  form input:focus,
+  form textarea:focus {
+    border-color: #69b5f2;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+  }
+  form button {
+    width: 100%;
+    padding: 12px;
+    background: #2b92e7;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  form button:hover {
+    background: #070131;
+  }
+
+  /* --- POPUP FORM STYLING --- */
+.form_popup {
+  display: none; /*default hidden*/
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.form_content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close_btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close_btn:hover {
+  color: red;
+}
+
+/* =========================
+   WHY STUDY UK
+========================= */
+.why_country {
+  background-color: #f8fbff;
+  padding: 70px 20px;
+}
+
+.why_country h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.section_intro {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Grid */
+.why_grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Card 
+.why_card {
+  background: rgb(203, 219, 254);
+  padding: 22px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  font-size: 20px;
+  line-height: 1.5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}*/
+.why_card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #1e2a5a;
+  padding: 15px 25px;
+  border-radius: 12px;
+  color:white;
+  font-size: 20px;
+  box-shadow: 0 6px 18px rgba(4, 18, 67, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.why_card p{
+   font-size: 25px;
+  /*line-height: 1.5;*/
+  color: #333;
+}
+
+/* Hover */
+.why_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(3, 27, 64, 0.18);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .why_grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   UK EDUCATION SYSTEM
+========================= */
+.education_system {
+  padding: 70px 20px;
+  background: #ffffff;
+}
+
+.education_system h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 45px;
+  color: #0d47a1;
+}
+
+.system_grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.system_card {
+  background: #e6f0fc;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.system_card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #010914;
+}
+
+.system_card ul {
+  padding-left: 18px;
+}
+
+.system_card li {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.system_card.highlight {
+  background-color: #09387f;
+  color: rgb(241, 240, 248);
+  font-size: 20px;
+}
+
+.system_card.highlight h3 {
+  color: #ffffff;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .system_grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   COURSES – UK
+========================= */
+.courses_country {
+  background-color: #bfdafd;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.courses_country h2 {
+  font-size: 35px;
+  margin-bottom: 45px;
+  color: #0d47a1;
+}
+
+/* Grid */
+.courses_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+.courses_grid span {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 14px;
+  font-size: 21px;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.courses_grid span:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(13, 71, 161, 0.22);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .courses_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* =========================
+   UNIVERSITIES – UK
+========================= */
+/* =========================
+   UNIVERSITIES TABLE – UK
+========================= */
+.uk_universities {
+  padding: 70px 20px;
+  background: #f8fbff;
+}
+
+.uk_universities h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #0d47a1;
+}
+
+/* Table */
+.uk_universities table {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Cells */
+.uk_universities th,
+.uk_universities td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 20px;
+}
+
+/* Header */
+.uk_universities th {
+  background-color: #09387f;
+  color: white;
+  font-weight: 600;
+}
+
+/* Zebra rows */
+.uk_universities tr:nth-child(even) {
+  background-color: #f1f6ff;
+}
+
+/* Hover */
+.uk_universities tr:hover {
+  background-color: #e3efff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .uk_universities table {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   COST OF STUDYING – UK
+========================= */
+.cost_section {
+  background-color: #f9fafd;
+  padding: 70px 20px;
+}
+
+.cost_section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 45px;
+  color: #0d47a1;
+}
+
+/* Grid */
+.cost_grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.cost_card {
+  background:#09387f;
+  color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px #031a3c;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.cost_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(1, 7, 14, 0.22);
+}
+
+/* Headings */
+.cost_card h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #f7f728;
+}
+
+/* Text */
+.cost_card p {
+  font-size:22px;
+  margin-bottom: 10px;
+  color: #fceeee;
+}
+
+.cost_card small {
+  font-size: 16px;
+  color: #f9f5f5;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cost_grid {
+    grid-template-columns: 1fr;
+  }
+}
+ /* FOOTER SECTION*/
+
+.footer_container {
+    background-color: #021b37;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 10px;
+    font-family: Rubik, sans-serif;
+    width:100%;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom:0;
+}
+
+.footer_brand {
+    text-align: left;
+    max-width: 500px;
+}
+.footer_brand h2 {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.footer_brand p {
+    color: #d0d7e1;
+    font-size: 16px;
+    margin: 0;
+}
+.footer_brand h4 {
+    color: rgb(253, 252, 252);
+    margin-bottom: 8px;
+}
+.footer_socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap:15px;
+}
+.logopic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;}

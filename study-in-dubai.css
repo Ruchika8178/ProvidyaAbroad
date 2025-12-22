@@ -1,0 +1,256 @@
+/* DUBAI PAGE CSS *-*-*-*-*-*- DUBAI PAGE CSS */
+/* HERO SECTION */
+.hero_dubai {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(
+      rgba(2, 27, 55, 0.75),
+      rgba(2, 27, 55, 0.75)
+    ),
+    url("dubai.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hero_dubai h1 {
+  font-size: 42px;
+  max-width: 900px;
+  margin-bottom: 15px;
+}
+
+.hero_dubai p {
+  font-size: 18px;
+  max-width: 750px;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+/* CTA BUTTONS */
+.cta_buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cta_btn {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0a9af3;
+  color: white;
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta_btn:hover {
+  background-color: #070131;
+  transform: translateY(-2px);
+}
+
+
+
+/* WHY STUDY IN DUBAI */
+
+.why_dubai {
+  background-color: #f8fbff;
+  padding: 70px 20px;
+}
+
+.why_dubai h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #0d47a1;
+  margin-bottom: 45px;
+}
+
+/* Grid */
+.why_dubai_grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Individual item */
+.why_item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgb(207, 204, 204);
+  padding: 22px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+/* Hover effect (subtle & professional) */
+.why_item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(13, 71, 161, 0.18);
+}
+
+/* Icon */
+.why_icon {
+  font-size: 30px;
+  min-width: 42px;
+}
+
+/* Text */
+.why_item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .why_dubai_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  
+
+/* COURSES SECTION */
+/* COURSES IN DUBAI – PROFESSIONAL STYLE */
+
+.courses_dubai {
+  background-color: #bfdafd;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.courses_dubai h2 {
+  font-size: 32px;
+  margin-bottom: 45px;
+  color: #0d47a1;
+}
+
+/* Grid */
+.courses_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+.course_card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+.course_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(13, 71, 161, 0.22);
+}
+
+/* Icon */
+.course_icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.course_card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .courses_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* UNIVERSITIES TABLE */
+.dubai_universities {
+  padding: 70px 20px;
+  background: #f8fbff;
+}
+
+.dubai_universities h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #0d47a1;
+}
+
+.dubai_universities table {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.dubai_universities th,
+.dubai_universities td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.dubai_universities th {
+  background-color: #09387f;
+  color: white;
+  font-weight: 600;
+}
+
+.dubai_universities tr:nth-child(even) {
+  background-color: #f1f6ff;
+}
+
+.dubai_universities tr:hover {
+  background-color: #e3efff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero_dubai h1 {
+    font-size: 30px;
+  }
+
+  .hero_dubai p {
+    font-size: 16px;
+  }
+
+  .cta_buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cta_buttons button {
+    width: 100%;
+  }
+
+  .dubai_universities table {
+    font-size: 14px;
+  }
+}
